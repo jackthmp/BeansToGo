@@ -27,6 +27,9 @@
 		3552170B22E92DB70071EFAE /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3552170022E92DB70071EFAE /* OpenSans-BoldItalic.ttf */; };
 		3552170D22E9300A0071EFAE /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3552170C22E9300A0071EFAE /* UIFont+.swift */; };
 		3552170F22E934730071EFAE /* CALayer+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3552170E22E934730071EFAE /* CALayer+.swift */; };
+		3552171122EA1B240071EFAE /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3552171022EA1B240071EFAE /* UIColor+.swift */; };
+		3552171422EA1EEA0071EFAE /* PartnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3552171322EA1EEA0071EFAE /* PartnerView.swift */; };
+		D182934A21D1DD0F561C5597 /* Pods_BeansToGo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA69F457B9F6ADFAC93F71D /* Pods_BeansToGo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0376395B1830CC6DAD63FF00 /* Pods-BeansToGo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeansToGo.release.xcconfig"; path = "Target Support Files/Pods-BeansToGo/Pods-BeansToGo.release.xcconfig"; sourceTree = "<group>"; };
 		35101F4E22E9130800A29C73 /* BeansToGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeansToGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35101F5122E9130800A29C73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35101F5822E9130E00A29C73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -73,6 +77,10 @@
 		3552170022E92DB70071EFAE /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		3552170C22E9300A0071EFAE /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		3552170E22E934730071EFAE /* CALayer+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+.swift"; sourceTree = "<group>"; };
+		3552171022EA1B240071EFAE /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		3552171322EA1EEA0071EFAE /* PartnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartnerView.swift; sourceTree = "<group>"; };
+		4A3A9A44B85EE2C9663EB548 /* Pods-BeansToGo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeansToGo.debug.xcconfig"; path = "Target Support Files/Pods-BeansToGo/Pods-BeansToGo.debug.xcconfig"; sourceTree = "<group>"; };
+		EAA69F457B9F6ADFAC93F71D /* Pods_BeansToGo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeansToGo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D182934A21D1DD0F561C5597 /* Pods_BeansToGo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +116,8 @@
 				35101F6522E9130F00A29C73 /* Beans To GoTests */,
 				35101F7022E9130F00A29C73 /* Beans To GoUITests */,
 				35101F4F22E9130800A29C73 /* Products */,
+				87356140379ECC05244C7BEA /* Pods */,
+				841CFBFEB55296B7CEB5D4D0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,12 +134,12 @@
 		35101F5022E9130800A29C73 /* BeansToGo */ = {
 			isa = PBXGroup;
 			children = (
+				3552171222EA1B290071EFAE /* Utilities */,
 				355216F522E92DB70071EFAE /* Open_Sans */,
 				35101F5122E9130800A29C73 /* AppDelegate.swift */,
 				35101F7F22E91AD700A29C73 /* HomeViewController.swift */,
 				35101F8122E91D8800A29C73 /* MeetingTableViewCell.swift */,
-				3552170C22E9300A0071EFAE /* UIFont+.swift */,
-				3552170E22E934730071EFAE /* CALayer+.swift */,
+				3552171322EA1EEA0071EFAE /* PartnerView.swift */,
 				35101F5822E9130E00A29C73 /* Assets.xcassets */,
 				35101F5A22E9130E00A29C73 /* LaunchScreen.storyboard */,
 				35101F5D22E9130E00A29C73 /* Info.plist */,
@@ -172,6 +183,34 @@
 			path = Open_Sans;
 			sourceTree = "<group>";
 		};
+		3552171222EA1B290071EFAE /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				3552170C22E9300A0071EFAE /* UIFont+.swift */,
+				3552170E22E934730071EFAE /* CALayer+.swift */,
+				3552171022EA1B240071EFAE /* UIColor+.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		841CFBFEB55296B7CEB5D4D0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EAA69F457B9F6ADFAC93F71D /* Pods_BeansToGo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		87356140379ECC05244C7BEA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4A3A9A44B85EE2C9663EB548 /* Pods-BeansToGo.debug.xcconfig */,
+				0376395B1830CC6DAD63FF00 /* Pods-BeansToGo.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -179,9 +218,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 35101F7622E9130F00A29C73 /* Build configuration list for PBXNativeTarget "BeansToGo" */;
 			buildPhases = (
+				7634BB96566E01B99B431668 /* [CP] Check Pods Manifest.lock */,
 				35101F4A22E9130800A29C73 /* Sources */,
 				35101F4B22E9130800A29C73 /* Frameworks */,
 				35101F4C22E9130800A29C73 /* Resources */,
+				7F297A45A82E9543EB504785 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -308,6 +349,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7634BB96566E01B99B431668 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BeansToGo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F297A45A82E9543EB504785 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BeansToGo/Pods-BeansToGo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BeansToGo/Pods-BeansToGo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BeansToGo/Pods-BeansToGo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		35101F4A22E9130800A29C73 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -318,6 +401,8 @@
 				35101F8222E91D8800A29C73 /* MeetingTableViewCell.swift in Sources */,
 				3552170F22E934730071EFAE /* CALayer+.swift in Sources */,
 				35101F5222E9130800A29C73 /* AppDelegate.swift in Sources */,
+				3552171122EA1B240071EFAE /* UIColor+.swift in Sources */,
+				3552171422EA1EEA0071EFAE /* PartnerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +567,7 @@
 		};
 		35101F7722E9130F00A29C73 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A3A9A44B85EE2C9663EB548 /* Pods-BeansToGo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -500,6 +586,7 @@
 		};
 		35101F7822E9130F00A29C73 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0376395B1830CC6DAD63FF00 /* Pods-BeansToGo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

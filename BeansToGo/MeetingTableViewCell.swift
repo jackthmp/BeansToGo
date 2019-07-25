@@ -32,23 +32,25 @@ class MeetingTableViewCell: UITableViewCell {
     containerView.layer.applySketchShadow(color: .black, alpha: 0.1, x: 0, y: 3, blur: 6)
     containerView.layer.cornerRadius = 6
     containerView.layer.masksToBounds = false
-    containerView.clipsToBounds = true
-    containerView.layer.borderColor = UIColor.lightGray.cgColor
+//    containerView.clipsToBounds = true
+    containerView.layer.borderColor = UIColor._lightGray.cgColor
     containerView.layer.borderWidth = 1
     contentView.addSubview(containerView)
     
     sideView = UIView(frame: .zero)
-    sideView.backgroundColor = .red
+    sideView.backgroundColor = ._lightRed
     containerView.addSubview(sideView)
     
     meetingTitleLabel = UILabel(frame: .zero)
     meetingTitleLabel.text = "Yelp Weekly"
-    meetingTitleLabel.font = .OpenSansBold16
+    meetingTitleLabel.font = ._OpenSansBold16
+    meetingTitleLabel.textColor = ._primaryGray
     containerView.addSubview(meetingTitleLabel)
     
     meetingDetailsLabel = UILabel(frame: .zero)
     meetingDetailsLabel.text = "Friday, 11AM • New Montgomery Office (8F)"
-    meetingDetailsLabel.font = .OpenSansRegular14
+    meetingDetailsLabel.font = ._OpenSansRegular14
+    meetingDetailsLabel.textColor = ._secondaryGray
     containerView.addSubview(meetingDetailsLabel)
     
     setConstraints()

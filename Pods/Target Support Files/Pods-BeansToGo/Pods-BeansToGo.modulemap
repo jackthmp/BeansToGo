@@ -1,0 +1,6 @@
+framework module Pods_BeansToGo {
+  umbrella header "Pods-BeansToGo-umbrella.h"
+
+  export *
+  module * { export * }
+}
