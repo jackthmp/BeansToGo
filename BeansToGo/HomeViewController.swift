@@ -10,27 +10,36 @@ import UIKit
 
 class HomeViewController: UIViewController {
   
-  private var meetingTableView: UITableView!
+  //private var meetingTableView: UITableView!
+    private var availableView: UIView!
 
   override func viewDidLoad() {
     super.viewDidLoad()
     
     view.backgroundColor = .red
     
-    meetingTableView = UITableView(frame: .zero)
-    meetingTableView.delegate = self
-    meetingTableView.dataSource = self
-    meetingTableView.register(MeetingTableViewCell.self, forCellReuseIdentifier: "meetingCell")
-    meetingTableView.separatorStyle = .none
-    view.addSubview(meetingTableView)
+//    meetingTableView = UITableView(frame: .zero)
+//    meetingTableView.delegate = self
+//    meetingTableView.dataSource = self
+//    meetingTableView.register(MeetingTableViewCell.self, forCellReuseIdentifier: "meetingCell")
+//    meetingTableView.separatorStyle = .none
+//    view.addSubview(meetingTableView)
+    availableView = AvailableView(frame: .zero)
+    availableView.backgroundColor = .white
+    view.addSubview(availableView)
     
     setConstraints()
   }
   
   func setConstraints() {
-    meetingTableView.snp.makeConstraints { make in
-      make.edges.equalToSuperview()
-    }
+//    meetingTableView.snp.makeConstraints { make in
+//      make.edges.equalToSuperview()
+//    }
+    availableView.translatesAutoresizingMaskIntoConstraints = false
+    availableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 200).isActive = true
+    availableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+    availableView.heightAnchor.constraint(equalToConstant: 200).isActive = true
+//    availableView.trailingAnchor.constraint(equalTo:
   }
 }
 

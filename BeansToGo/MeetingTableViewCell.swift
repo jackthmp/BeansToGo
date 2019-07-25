@@ -61,7 +61,7 @@ class MeetingTableViewCell: UITableViewCell {
     dividerView.backgroundColor = ._lightGray
     containerView.addSubview(dividerView)
     
-    partnerView = PartnerView(frame: .zero)
+    partnerView = AvailableView(frame: .zero)
     containerView.addSubview(partnerView)
     
     setConstraints()

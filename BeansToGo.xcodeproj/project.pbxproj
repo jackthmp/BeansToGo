@@ -25,13 +25,17 @@
 		3552170922E92DB70071EFAE /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 355216FE22E92DB70071EFAE /* LICENSE.txt */; };
 		3552170A22E92DB70071EFAE /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 355216FF22E92DB70071EFAE /* OpenSans-Regular.ttf */; };
 		3552170B22E92DB70071EFAE /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3552170022E92DB70071EFAE /* OpenSans-BoldItalic.ttf */; };
-		3552170D22E9300A0071EFAE /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3552170C22E9300A0071EFAE /* UIFont+.swift */; };
-		3552170F22E934730071EFAE /* CALayer+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3552170E22E934730071EFAE /* CALayer+.swift */; };
 		3552171122EA1B240071EFAE /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3552171022EA1B240071EFAE /* UIColor+.swift */; };
 		3552171422EA1EEA0071EFAE /* PartnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3552171322EA1EEA0071EFAE /* PartnerView.swift */; };
 		3552171622EA318A0071EFAE /* MeetingTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3552171522EA318A0071EFAE /* MeetingTableHeaderView.swift */; };
 		3552171822EA32C30071EFAE /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3552171722EA32C30071EFAE /* HomeHeaderView.swift */; };
 		D182934A21D1DD0F561C5597 /* Pods_BeansToGo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA69F457B9F6ADFAC93F71D /* Pods_BeansToGo.framework */; };
+		EAE53BA722EA1C02002F81F8 /* AvailableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE53BA622EA1C02002F81F8 /* AvailableView.swift */; };
+		EAE53BAA22EA3483002F81F8 /* CALayer+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE53BA822EA3483002F81F8 /* CALayer+.swift */; };
+		EAE53BAB22EA3483002F81F8 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE53BA922EA3483002F81F8 /* UIFont+.swift */; };
+		EAE53BAD22EA5366002F81F8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE53BAC22EA5366002F81F8 /* ProfileViewController.swift */; };
+		EAE53BAF22EA53F5002F81F8 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE53BAE22EA53F5002F81F8 /* ProfileHeaderView.swift */; };
+		EAE53BB122EA6C47002F81F8 /* PreferencesButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE53BB022EA6C47002F81F8 /* PreferencesButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,14 +81,18 @@
 		355216FE22E92DB70071EFAE /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		355216FF22E92DB70071EFAE /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		3552170022E92DB70071EFAE /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
-		3552170C22E9300A0071EFAE /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
-		3552170E22E934730071EFAE /* CALayer+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+.swift"; sourceTree = "<group>"; };
 		3552171022EA1B240071EFAE /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		3552171322EA1EEA0071EFAE /* PartnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartnerView.swift; sourceTree = "<group>"; };
 		3552171522EA318A0071EFAE /* MeetingTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingTableHeaderView.swift; sourceTree = "<group>"; };
 		3552171722EA32C30071EFAE /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
 		4A3A9A44B85EE2C9663EB548 /* Pods-BeansToGo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeansToGo.debug.xcconfig"; path = "Target Support Files/Pods-BeansToGo/Pods-BeansToGo.debug.xcconfig"; sourceTree = "<group>"; };
 		EAA69F457B9F6ADFAC93F71D /* Pods_BeansToGo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeansToGo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAE53BA622EA1C02002F81F8 /* AvailableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableView.swift; sourceTree = "<group>"; };
+		EAE53BA822EA3483002F81F8 /* CALayer+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+.swift"; sourceTree = "<group>"; };
+		EAE53BA922EA3483002F81F8 /* UIFont+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
+		EAE53BAC22EA5366002F81F8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		EAE53BAE22EA53F5002F81F8 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		EAE53BB022EA6C47002F81F8 /* PreferencesButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,10 +150,14 @@
 				355216F522E92DB70071EFAE /* Open_Sans */,
 				35101F5122E9130800A29C73 /* AppDelegate.swift */,
 				35101F7F22E91AD700A29C73 /* HomeViewController.swift */,
+				EAE53BAC22EA5366002F81F8 /* ProfileViewController.swift */,
+				EAE53BAE22EA53F5002F81F8 /* ProfileHeaderView.swift */,
+				EAE53BB022EA6C47002F81F8 /* PreferencesButtonView.swift */,
 				3552171522EA318A0071EFAE /* MeetingTableHeaderView.swift */,
 				3552171722EA32C30071EFAE /* HomeHeaderView.swift */,
 				35101F8122E91D8800A29C73 /* MeetingTableViewCell.swift */,
 				3552171322EA1EEA0071EFAE /* PartnerView.swift */,
+				EAE53BA622EA1C02002F81F8 /* AvailableView.swift */,
 				35101F5822E9130E00A29C73 /* Assets.xcassets */,
 				35101F5A22E9130E00A29C73 /* LaunchScreen.storyboard */,
 				35101F5D22E9130E00A29C73 /* Info.plist */,
@@ -192,8 +204,8 @@
 		3552171222EA1B290071EFAE /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				3552170C22E9300A0071EFAE /* UIFont+.swift */,
-				3552170E22E934730071EFAE /* CALayer+.swift */,
+				EAE53BA822EA3483002F81F8 /* CALayer+.swift */,
+				EAE53BA922EA3483002F81F8 /* UIFont+.swift */,
 				3552171022EA1B240071EFAE /* UIColor+.swift */,
 			);
 			path = Utilities;
@@ -401,15 +413,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3552170D22E9300A0071EFAE /* UIFont+.swift in Sources */,
 				35101F8022E91AD700A29C73 /* HomeViewController.swift in Sources */,
 				35101F8222E91D8800A29C73 /* MeetingTableViewCell.swift in Sources */,
 				3552171822EA32C30071EFAE /* HomeHeaderView.swift in Sources */,
-				3552170F22E934730071EFAE /* CALayer+.swift in Sources */,
+				EAE53BAB22EA3483002F81F8 /* UIFont+.swift in Sources */,
 				3552171622EA318A0071EFAE /* MeetingTableHeaderView.swift in Sources */,
+				EAE53BB122EA6C47002F81F8 /* PreferencesButtonView.swift in Sources */,
+				EAE53BA722EA1C02002F81F8 /* AvailableView.swift in Sources */,
+				EAE53BAD22EA5366002F81F8 /* ProfileViewController.swift in Sources */,
+				EAE53BAF22EA53F5002F81F8 /* ProfileHeaderView.swift in Sources */,
 				35101F5222E9130800A29C73 /* AppDelegate.swift in Sources */,
 				3552171122EA1B240071EFAE /* UIColor+.swift in Sources */,
 				3552171422EA1EEA0071EFAE /* PartnerView.swift in Sources */,
+				EAE53BAA22EA3483002F81F8 /* CALayer+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
