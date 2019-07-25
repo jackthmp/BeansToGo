@@ -28,11 +28,9 @@ class HomeViewController: UIViewController {
   }
   
   func setConstraints() {
-    meetingTableView.translatesAutoresizingMaskIntoConstraints = false
-    meetingTableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-    meetingTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-    meetingTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-    meetingTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+    meetingTableView.snp.makeConstraints { make in
+      make.edges.equalToSuperview()
+    }
   }
 }
 
@@ -51,7 +49,16 @@ extension HomeViewController: UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 146
+    return UITableView.automaticDimension
+  }
+  
+  func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    return UITableView.automaticDimension
+  }
+  
+  func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    let headerView = MeetingTableHeaderView()
+    return headerView
   }
   
   

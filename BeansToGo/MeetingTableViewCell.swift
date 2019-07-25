@@ -14,12 +14,16 @@ class MeetingTableViewCell: UITableViewCell {
   var sideView: UIView!
   var meetingTitleLabel: UILabel!
   var meetingDetailsLabel: UILabel!
+  var dividerView: UIView!
+  var partnerView: UIView!
   
   let titleTextSize: CGFloat = 16
   let detailsTextSize: CGFloat = 14
   let padding: CGFloat = 16
   let titlePadding: CGFloat = 4
   let shadowOffset: CGFloat = 3
+  let dividerHeight: CGFloat = 1
+  let sideViewWidth: CGFloat = 8
   
   let containerPadding: CGFloat = 16
   
@@ -53,29 +57,52 @@ class MeetingTableViewCell: UITableViewCell {
     meetingDetailsLabel.textColor = ._secondaryGray
     containerView.addSubview(meetingDetailsLabel)
     
+    dividerView = UIView(frame: .zero)
+    dividerView.backgroundColor = ._lightGray
+    containerView.addSubview(dividerView)
+    
+    partnerView = PartnerView(frame: .zero)
+    containerView.addSubview(partnerView)
+    
     setConstraints()
   }
   
   func setConstraints() {
-    containerView.translatesAutoresizingMaskIntoConstraints = false
-    containerView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: containerPadding/2).isActive = true
-    containerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -containerPadding/2).isActive = true
-    containerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: containerPadding).isActive = true
-    containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -containerPadding).isActive = true
     
-    sideView.translatesAutoresizingMaskIntoConstraints = false
-    sideView.topAnchor.constraint(equalTo: containerView.topAnchor).isActive = true
-    sideView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor).isActive = true
-    sideView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor).isActive = true
-    sideView.widthAnchor.constraint(equalToConstant: 8).isActive = true
+    containerView.snp.makeConstraints { make in
+      make.top.equalToSuperview()
+      make.bottom.leading.trailing.equalToSuperview().inset(containerPadding)
+    }
     
-    meetingTitleLabel.translatesAutoresizingMaskIntoConstraints = false
-    meetingTitleLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: padding).isActive = true
-    meetingTitleLabel.leadingAnchor.constraint(equalTo: sideView.trailingAnchor, constant: padding).isActive = true
     
-    meetingDetailsLabel.translatesAutoresizingMaskIntoConstraints = false
-    meetingDetailsLabel.topAnchor.constraint(equalTo: meetingTitleLabel.bottomAnchor, constant: titlePadding).isActive = true
-    meetingDetailsLabel.leadingAnchor.constraint(equalTo: meetingTitleLabel.leadingAnchor).isActive = true
+    sideView.snp.makeConstraints { make in
+      make.top.bottom.leading.equalToSuperview()
+      make.width.equalTo(sideViewWidth)
+    }
+    
+    meetingTitleLabel.snp.makeConstraints { make in
+      make.top.trailing.equalToSuperview().inset(padding)
+      make.leading.equalTo(sideView.snp.trailing).offset(padding)
+    }
+    
+    meetingDetailsLabel.snp.makeConstraints { make in
+      make.top.equalTo(meetingTitleLabel.snp.bottom).offset(titlePadding)
+      make.leading.trailing.equalTo(meetingTitleLabel)
+    }
+    
+    dividerView.snp.makeConstraints { make in
+      make.top.equalTo(meetingDetailsLabel.snp.bottom).offset(padding)
+      make.leading.equalTo(sideView.snp.trailing).offset(padding)
+      make.trailing.equalToSuperview().inset(padding)
+      make.height.equalTo(dividerHeight)
+    }
+    
+    partnerView.snp.makeConstraints { make in
+      make.top.equalTo(dividerView.snp.bottom)
+      make.leading.equalTo(sideView.snp.trailing)
+      make.trailing.equalToSuperview()
+      make.bottom.equalToSuperview()
+    }
   }
   
   required init?(coder aDecoder: NSCoder) {

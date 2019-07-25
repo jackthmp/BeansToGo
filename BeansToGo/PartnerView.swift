@@ -13,9 +13,13 @@ class PartnerView: UIView {
   var imageView: UIImageView!
   var nameLabel: UILabel!
   var descriptionLabel: UILabel!
+  var emailButton: UIButton!
   
   let imageHeight: CGFloat = 36
+  let imageBorderWidth: CGFloat = 2
   let imagePadding: CGFloat = 12
+  let edgePadding: CGFloat = 16
+  let buttonPadding: CGFloat = 8
   
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -23,6 +27,7 @@ class PartnerView: UIView {
     imageView = UIImageView(frame: .zero)
     imageView.backgroundColor = .red
     imageView.layer.cornerRadius = imageView.bounds.width/2
+    imageView.clipsToBounds = true
     addSubview(imageView)
     
     nameLabel = UILabel(frame: .zero)
@@ -33,26 +38,46 @@ class PartnerView: UIView {
     descriptionLabel = UILabel(frame: .zero)
     descriptionLabel.font = UIFont._OpenSansRegular12
     descriptionLabel.textColor = ._secondaryGray
+    descriptionLabel.numberOfLines = 0
     addSubview(descriptionLabel)
+    
+    emailButton = UIButton(frame: .zero)
+    emailButton.setImage(#imageLiteral(resourceName: "18x18_external_link"), for: .normal)
+    addSubview(emailButton)
+    
+    nameLabel.text = "Matthew P."
+    descriptionLabel.text = "Engineering - Biz Money - Biz Money • Engineering Intern"
     
     setConstraints()
     
   }
   
   func setConstraints() {
-    imageView.translatesAutoresizingMaskIntoConstraints = false
-    imageView.heightAnchor.constraint(equalToConstant: imageHeight).isActive = true
-    imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor).isActive = true
-    imageView.topAnchor.constraint(equalTo: topAnchor).isActive = true
-    imageView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+    imageView.snp.makeConstraints { (make) in
+      make.height.width.equalTo(imageHeight)
+      make.top.leading.equalToSuperview().offset(edgePadding)
+    }
     
-    nameLabel.translatesAutoresizingMaskIntoConstraints = false
-    nameLabel.topAnchor.constraint(equalTo: imageView.topAnchor).isActive = true
-    nameLabel.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: imagePadding)
-    nameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -imagePadding)
+    imageView.layer.cornerRadius = imageHeight / 2
     
-    descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
-    descriptionLabel.topAnchor.co
+    nameLabel.snp.makeConstraints { make in
+      make.top.equalTo(imageView)
+      make.leading.equalTo(imageView.snp.trailing).offset(imagePadding)
+    }
+    
+    descriptionLabel.snp.makeConstraints { make in
+      make.top.equalTo(nameLabel.snp.bottom)
+      make.leading.equalTo(nameLabel)
+      make.trailing.equalToSuperview().inset(edgePadding)
+      make.bottom.equalToSuperview().inset(edgePadding)
+    }
+    
+    emailButton.snp.makeConstraints { make in
+      make.top.bottom.equalTo(nameLabel)
+      make.leading.equalTo(nameLabel.snp.trailing).offset(buttonPadding)
+      make.trailing.lessThanOrEqualToSuperview().inset(imagePadding)
+    }
+  
   
   }
   
