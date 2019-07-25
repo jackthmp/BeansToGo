@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Beans To Go.xcodeproj">
+      location = "self:/Users/jackt/Beans To Go/BeansToGo.xcodeproj">
    </FileRef>
 </Workspace>
