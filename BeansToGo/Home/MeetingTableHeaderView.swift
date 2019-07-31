@@ -10,17 +10,19 @@ import UIKit
 
 class MeetingTableHeaderView: UIView {
   
-  var label: UILabel!
-  
-  let padding: CGFloat = 16
+  var label: UILabel = {
+    let label = UILabel()
+    label.font = ._OpenSansSemiBold16
+    label.textColor = ._secondaryGray
+    label.text = "This Week"
+    return label
+  }()
 
   override init(frame: CGRect) {
     super.init(frame: frame)
     
-    label = UILabel()
-    label.font = ._OpenSansSemiBold16
-    label.textColor = ._secondaryGray
-    label.text = "This Week"
+    backgroundColor = .white
+    
     addSubview(label)
     
     setConstraints()
@@ -28,12 +30,11 @@ class MeetingTableHeaderView: UIView {
   
   func setConstraints() {
     label.snp.makeConstraints { make in
-      make.top.bottom.leading.equalToSuperview().inset(padding)
+      make.top.bottom.leading.equalToSuperview().inset(Padding.large)
     }
   }
   
   required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
-  
 }

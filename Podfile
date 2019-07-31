@@ -4,4 +4,6 @@ use_frameworks!
 
 target 'BeansToGo' do
     pod 'SnapKit', '~> 5.0.0'
+    pod 'GoogleSignIn', '~> 4.1.1'
+    pod 'SwiftSoup'
 end
