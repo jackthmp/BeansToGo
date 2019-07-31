@@ -1,4 +1,4 @@
-# BeansToGo
+# Beans to Go
 
 *Beans to Go* is an iOS App for Beans. Beans is a great initiative for meeting new people around the office by randomly matching employees for weekly coffee chats, and this app puts all that functionality at your fingertips!
 
