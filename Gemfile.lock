@@ -59,7 +59,7 @@ GEM
     netrc (0.11.0)
     nokogiri (1.10.4)
       mini_portile2 (~> 2.4.0)
-    rack (2.0.8)
+    rack (2.1.4)
     rspec (3.8.0)
       rspec-core (~> 3.8.0)
       rspec-expectations (~> 3.8.0)
@@ -90,7 +90,7 @@ PLATFORMS
 DEPENDENCIES
   cocoapods
   nokogiri
-  rack (~> 2.0.8)
+  rack (~> 2.1.4)
   rspec
 
 BUNDLED WITH
